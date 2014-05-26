@@ -1,0 +1,17 @@
+<html>
+    <body background="../../../media/2dyVEsu.jpg">
+    <body>
+        <h3 align=right style="color:Gold"> Photospread: Account registration </h3>
+        <form action="/accounts/register/" method="POST">{% csrf_token %}
+            <P align=right>
+            <table style="color:Gold">
+            {{ form.as_table }}
+            </table>
+            </P>
+            
+        <p align=right>
+            <input type="submit" value="Submit" />
+        </p>
+        </form>
+    </body>
+</html>
