@@ -122,7 +122,11 @@ class Image(models.Model):
                 (self.image.name, self.thumbnail.name))
     thumbnail_.allow_tags = True
 
-
+    #order by recent first
+    class Meta:
+        ordering = ['-created',]
+        
+        
 class Album(models.Model):
     """Album is the container for images. It has many to many 
     relation with Image, an image can exist in multipe albums"""
@@ -142,3 +146,8 @@ class Album(models.Model):
         return join(lst, ', ')
     images.allow_tags = True
 
+    #Order by recent first
+    class Meta:
+        ordering = ['-created_date',]
+        
+        
