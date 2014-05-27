@@ -22,6 +22,8 @@ class ImageAdmin(admin.ModelAdmin):
                     "rating", "size", "tags_", "thumbnail_", "created"]
     list_filter = ["tags", "user"]
 
+    #Override the admin form to show(/not to show) user @admin interface
+    # Admin can view different users , User can see only self
     def get_form(self, request, obj=None, **kwargs):
         if not request.user.is_superuser:
             kwargs['exclude'] = ['user',]
@@ -34,7 +36,8 @@ class ImageAdmin(admin.ModelAdmin):
         if obj is not None and not request.user.is_superuser and request.user.id != obj.user.id:
             return False
         return True
-
+    
+    #user can view only his/her images, Super user (admin) has full permissions 
     def queryset(self, request):
         if request.user.is_superuser:
             return Image.objects.all()
