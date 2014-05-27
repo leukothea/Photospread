@@ -136,14 +136,18 @@ def update(request):
             pk = k.split('-')[1]
             images[pk]["albums"] = p.getlist(k)
 
-    # process properties, assign to image objects and save
+    #for performance reasons, rather than setting a property at a time and saving,
+    # process properties, assign to image objects and save.
     for k, d in images.items():
         image = Image.objects.get(pk=k)
         image.title = d["title"]
         image.rating = int(d["rating"])
 
         # tags - assign or create if a new tag!
-        tags = d["tags"].split(', ')
+        #Its also crucial that we create a new tag if it does not exist yet. 
+        #Fortunately, Django is nice enough to provide a convenient shortcut to do just that in one line 
+        #(the function returns a tuple where second value indicates if a new object was created; 
+        #we’re only interested in the object itself in this case).
         lst = []
         for t in tags:
             if t: lst.append(Tag.objects.get_or_create(tag=t)[0])
