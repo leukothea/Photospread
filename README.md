@@ -3,7 +3,7 @@ Photospread
 
 Photospread - Photo organizer and uploader (Course project for UWPCE-PythonCert - for Learning )  
 Acknowledgement :  
-  Django by example - http://lightbird.net/ 
+  Django by example - http://lightbird.net/
   Django-admin multiple file up-loader - https://github.com/gkuhn1/django-admin-multiupload 
   facebookconsloe - http://blog.carduner.net/2011/09/06/easy-facebook-scripting-in-python/ 
   Smugmug uploader script by Scott Moonen - http://scottmoonen.com/2008/12/01/smugmug-uploader/ 
