@@ -11,17 +11,22 @@ Acknowledgement :
 Website background image is licensed by www.rgbstock.com. Images (example) uploaded are private and  not to  be used for any commercial purposes.
 
 
-Installation options.
+Installation options - 
 
-git clone https://github.com/mi3/Photospread.git
-Create a virtual env , activate it.
-Install Django , (Libjpg for mac), Pillow, Multiuploader, Django registration package 
-(Please refer setup.py / fr.txt for versions) 
-
-Or 
-Please check Setup.py 
+Manual :
+  git clone https://github.com/mi3/Photospread.git
+  Create a virtual env , activate it.
+  Install Django , (Libjpg for mac), Pillow, Multiuploader, Django registration package 
+  (Please refer setup.py / fr.txt for versions) 
 
 Or 
-Inside virtual evv pip install fr.txt
+  Please check Setup.py 
+
+Or 
+  Inside virtual env pip install fr.txt
+  
+  
+Note : Manual installation is better due to pillow/PIL
+for mac-os first install libjpeg (brew install libjpeg ) then Pillow.
 
 Thanks.
