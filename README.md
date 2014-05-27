@@ -26,7 +26,6 @@ Or
   Inside virtual env pip install fr.txt
   
   
-Note : Manual installation is better due to pillow/PIL
-for mac-os first install libjpeg (brew install libjpeg ) then Pillow.
+Note : Manual installation preferred due to pillow/PIL. For mac-os first install libjpeg (brew install libjpeg ) then Pillow.
 
 Thanks.
