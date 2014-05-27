@@ -50,7 +50,8 @@ class Image(models.Model):
     thumbnail2 = models.ImageField(upload_to="images/", blank=True, null=True)
 
     def save(self, *args, **kwargs):
-        #Save image dimensions, orientation
+        #overriding model save method by PIL for saving image dimentions, orientation by reading exif. 
+        #(Exchangeable image file format - http://en.wikipedia.org/wiki/Exchangeable_image_file_format
         super(Image, self).save(*args, **kwargs)
         im = PImage.open(pjoin(settings.MEDIA_ROOT, self.image.name))
         if hasattr(im, '_getexif'):
