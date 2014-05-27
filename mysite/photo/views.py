@@ -144,8 +144,6 @@ def update(request):
         image.rating = int(d["rating"])
 
         # tags - assign or create if a new tag!
-        #Its also crucial that we create a new tag if it does not exist yet. 
-        #Fortunately, Django is nice enough to provide a convenient shortcut to do just that in one line 
         #(the function returns a tuple where second value indicates if a new object was created; 
         #we’re only interested in the object itself in this case).
         lst = []
