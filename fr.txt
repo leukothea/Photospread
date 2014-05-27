@@ -1,0 +1,9 @@
+Django==1.6.2
+MultipartPostHandler==0.1.0
+Pillow==2.4.0
+South==0.8.4
+admin-multiupload==0.1
+argparse==1.2.1
+django-registration==1.0
+facebook-sdk==0.4.0
+wsgiref==0.1.2
