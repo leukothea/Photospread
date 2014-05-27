@@ -166,7 +166,14 @@ def update(request):
 
 @login_required
 def search(request):
-    """Search, filter, sort images based on different parameters."""
+    """Search, filter, sort images based on different parameters.
+    The form can have a large number of parameters that are submitted via POST request, 
+    while the paginator works through a link which is a GET request. 
+    So save them in session. When you submit the form, the view will save all parameters 
+    in session dictionary, filter the results and show you the first page. 
+    Once you click on the second page, parameters are loaded from session. 
+    If you resubmit the form, you will go back to the first page again.
+    """
     try: page = int(request.GET.get("page", '1'))
     except ValueError: page = 1 
 
@@ -294,6 +301,7 @@ def update_and_filter(request, images, p):
                 else:
                     results = []
     if results:
+        #distinct() method to avoid duplicate
         results = results.distinct()
     return results
 
