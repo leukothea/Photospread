@@ -10,7 +10,7 @@ setup(
     packages=find_packages(),
     include_package_data=True,
     url='http://pypi.python.org/pypi/PhotoSpread/',
-    license='LICENSE.txt',
+    license='Please check readme',
     description='A Django-based project for organizing and sharing photos',
     long_description=open('Photospread/README.md').read(),
     install_requires=[
