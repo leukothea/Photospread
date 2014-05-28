@@ -87,3 +87,8 @@ EMAIL_PORT = 587
 EMAIL_HOST_USER = 'pytest.photo@gmail.com'
 EMAIL_HOST_PASSWORD = 'you know what'
 ACCOUNT_ACTIVATION_DAYS = 2
+
+#Hardcoded Smugmug credentials. Change your credentials here. 
+#Password is base64 encoded.
+SMEMAIL='linhchan1205@gmail.com'
+SMPASSWORD='aWxvdmVyb2NrY2xpbWJpbmc='

@@ -1,14 +1,15 @@
-import urllib, urllib2, urlparse
+import urllib, urllib2, urlparse, base64
 import django.utils.simplejson as json
 import re, hashlib, os.path
+from django.conf import settings
 
 """
 This will use API version 1.2.2
 """
 
 """ Constants """
-EMAIL='linhchan1205@gmail.com'
-PASSWORD='iloverockclimbing'
+EMAIL=settings.SMEMAIL
+PASSWORD=base64.b64decode(settings.SMPASSWORD).decode('UTF-8')
 API_KEY='PIA0bSs4qxvzwsNUUvGt1hNeGQhZoE3K'
 API_VERSION='1.2.2'
 API_URL='https://api.smugmug.com/services/api/json/1.2.2/' # Assume SSL is used
